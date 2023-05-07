@@ -7,7 +7,7 @@ function App() {
   return (
     <>
     <Toaster/>
-    <div>
+    <div className='flex items-center justify-center  h-screen bg-gray-300 '>
     
         <Link to="Usersupload">
 
