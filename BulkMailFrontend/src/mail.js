@@ -17,7 +17,6 @@ const Mail = () => {
       onSubmit={async(values)=>{
         try {
           const res = await axios.post("http://3.110.31.144/api/sendmail",values)
-          toast(res)
         } catch (error) {
           console.log(error)
         }
