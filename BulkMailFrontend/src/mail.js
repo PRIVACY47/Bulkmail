@@ -21,8 +21,6 @@ const Mail = () => {
         } catch (error) {
           console.log(error)
         }
-       
-        
       }}
     >
       <Form className='flex items-center justify-center h-screen bg-gray-300'> 
