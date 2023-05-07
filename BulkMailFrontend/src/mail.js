@@ -14,7 +14,7 @@ const Mail = () => {
         text: Yup.string().required('Required')
       })}
       onSubmit={async(values)=>{
-        const res = await axios.post("http://3.110.31.144:8000/sendmail",values)
+        const res = await axios.post("http://3.110.31.144/api/sendmail",values)
         
       }}
     >
