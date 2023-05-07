@@ -1,7 +1,7 @@
 import React from 'react'
-import toast, { Toaster } from 'react-hot-toast';
+import  { Toaster } from 'react-hot-toast';
 import { Link } from 'react-router-dom'
-import Mail from './users'
+
 function App() {
 
   return (

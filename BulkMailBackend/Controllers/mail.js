@@ -6,17 +6,13 @@ let transporter = nodemailer.createTransport({
     secure: true,
     host:'smtp.gmail.com',
     auth: {
-        user: 'eesashaik03@gmail.com',
-        pass: "iophbybwqnultzhs"
+        user: 'muneer.shaik0016@gmail.com',
+        pass: "zccnfhugllpdmcgl"
 
     },
 })
 
 async function sendMail(to , subject , text  ) {
-        // function takes to (array of emails) and subject of the mail , text of mail , html of the mail
-        // return error if there is error otherwise return email sent with success
-
-
     let mailOption  ={
         to :  to,
         from: 'eesashaik03@gmial.com',
@@ -27,13 +23,13 @@ async function sendMail(to , subject , text  ) {
     }
     
     let response = await transporter.sendMail(mailOption )
-    console.log(response)
+    
     if (response.response.includes('OK')){
-        return 'success'
+        return 'mail sent sucessfully'
        
     }
     else {
-        return 'failure'
+        return 'failed to send'
     }
     
     
@@ -55,7 +51,7 @@ const sendMailController = async (req,res) => {
                 text :data.text
             }
             let {to , subject , text } = body
-           console.log(to)
+     
             let resp = await sendMail(to,subject,text)
 
 

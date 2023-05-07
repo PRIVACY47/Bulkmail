@@ -4,20 +4,26 @@ import toast, { Toaster } from 'react-hot-toast'
 import * as Yup from 'yup';
 import axios from 'axios';
 const Mail = () => {
-  toast("sorry")
+ 
   return (
   <>
-  <Toaster/>
+ <Toaster/>
     <Formik
       initialValues={{ subject: '', text: ''}}
       validationSchema={Yup.object({
         subject: Yup.string().required('Required'),
         text: Yup.string().required('Required')
       })}
-      onSubmit={async(values)=>{
+      onSubmit={async(values,{ resetForm })=>{
         try {
+       
+
           const res = await axios.post("http://3.110.31.144/api/sendmail",values)
+          resetForm();
+         
+          toast(res.data.status)
         } catch (error) {
+          toast.error("internal server error")
           console.log(error)
         }
       }}
