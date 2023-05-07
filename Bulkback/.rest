@@ -1,0 +1,13 @@
+POST http://localhost:3000/mail
+content-type: application/json
+
+
+
+{
+    "email":"eesashaik03@gmail.com",
+    "phone":"7997979777",
+    "name":"hodo"
+}
+
+
+# GET http://localhost:3000/mail
