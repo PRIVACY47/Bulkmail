@@ -21,7 +21,8 @@ function Usersupload() {
       const workbook = XLSX.read(event.target.result, { type: 'binary' });
       const worksheet = workbook.Sheets['Sheet1'];
       const data = XLSX.utils.sheet_to_json(worksheet);      
-         const res = await axios.post("http://3.110.31.144/api/mail",data)
+        const res = await axios.post("http://3.110.31.144/api/mail",data)
+        
        
         toast(res.data.message)
        

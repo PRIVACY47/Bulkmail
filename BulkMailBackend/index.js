@@ -18,5 +18,4 @@ app.use('/', router)
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
   mongoose.connect(process.env.MONGODB_URL).then(console.log("connected to backend"))
-
 })
