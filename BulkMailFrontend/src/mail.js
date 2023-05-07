@@ -1,11 +1,12 @@
 import React from 'react';
 import { Formik, Field, Form, ErrorMessage } from 'formik';
+import toast from 'react-hot-toast'
 import * as Yup from 'yup';
 import axios from 'axios';
 const Mail = () => {
   toast("sorry")
-  return (<>
-    <Toaster/>
+  return (
+  <>
     <Formik
       initialValues={{ subject: '', text: ''}}
       validationSchema={Yup.object({
