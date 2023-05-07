@@ -23,7 +23,7 @@ function Usersupload() {
       const data = XLSX.utils.sheet_to_json(worksheet);
       console.log(data)
       
-        const res = await axios.post("http://localhost:8000/mail",data)
+        const res = await axios.post("http://3.110.31.144:8000/mail",data)
       console.log(res)
     };
     reader.readAsBinaryString(file);
